@@ -1,0 +1,18 @@
+{
+    "version": 4,
+    "configurations": [
+        {
+            "name": "Arduino-bare-metal",
+            "includePath": [
+                "${workspaceFolder}/package/**"
+            ],
+            "compilerPath": "/usr/bin/avr-gcc",
+            "compilerArgs": [
+                "-mmcu=atmega328p"
+            ],
+            "cStandard": "c11",
+            "intelliSenseMode": "gcc-arm"
+            
+        }
+    ]
+}
