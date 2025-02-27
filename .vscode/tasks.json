@@ -6,8 +6,26 @@
             "type": "shell",
             "command": "cmake",
             "args": [
+                "-G",
+                "Ninja",
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/cmake/avr-gcc.cmake",
+                "-B",
+                "${workspaceFolder}/build",
+                "&&",
+                "cmake",
+                "--build",
+                "${workspaceFolder}/build"
+            ]
+        },
+        {
+            "label": "upload",
+            "type": "shell",
+            "command": "${workspaceFolder}/avrdude/avrdude_upload.sh",
+            "args": [
                 
             ]
+
         }
     ]
 }

@@ -25,7 +25,7 @@ SECTIONS
         _etext = .;     /*save text section ending address in variable (in startup code)*/
     } >FLASH            /*stored in flash*/
 
-    _sidata = LOADADDR(.data)
+    _sidata = LOADADDR(.data);
 
     .data :
     {
